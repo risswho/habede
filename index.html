@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Ulang Tahun! </title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Sacramento&display=swap" rel="stylesheet">
+    <!-- FontAwesome untuk Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Efek Latar Belakang Balon & Hati -->
+    <div class="floating-bg" id="floatingBg"></div>
+
+    <!-- Halaman Utama / Hero -->
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <span class="badge">Hari Yang Special</span>
+            <h1 class="title">Selamat Ulang Tahun!</h1>
+            <p class="subtitle">Sebuah kejutan kecil yang dibuat khusus di hari yang istimewa.</p>
+            <button id="startBtn" class="primary-btn">Mulai Perayaan</button>
+        </div>
+    </section>
+
+    <!-- Konten Utama (Tersembunyi Awalnya) -->
+    <main id="mainContent" class="hidden">
+        <!-- Audio Player -->
+        <audio id="giftMusic" src="song.mpeg" preload="auto"></audio>
+
+        <!-- Kotak Kado Kejutan -->
+        <section class="gift-section">
+            <h2 class="section-title">Tap Kotak Kadonya!</h2>
+            <div class="gift-container" id="giftBox">
+                <div class="gift-box">
+                    <div class="gift-lid"></div>
+                    <div class="gift-ribbon-vertical"></div>
+                    <div class="gift-body"></div>
+                </div>
+                <p class="click-hint">Klik untuk buka!</p>
+            </div>
+
+            <!-- Kartu Ucapan (Muncul setelah kado dibuka) -->
+            <div id="greetingCard" class="greeting-card hidden">
+                <div class="card-content">
+                    <h3>Untuk Kamu yang Spesial,</h3>
+                    <p>Selamat bertambah usia! Semoga di tahun ini segala impian, kebahagiaan, dan keberkahan senantiasa menyertai langkahmu. Terima kasih sudah menjadi inspirasi dan membawa banyak kebaikan bagi orang sekitar. Tetap jadi pribadi yang ceria ya! ✨💖</p>
+                    <span class="signature">- Dari siapa yah?</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kue Ulang Tahun & Lilin -->
+        <section class="cake-section">
+            <h2 class="section-title">Tiup Lilinnya & Buat Permintaan! </h2>
+            <div class="cake-container">
+                <div class="cake">
+                    <div class="plate"></div>
+                    <div class="layer layer-bottom"></div>
+                    <div class="layer layer-middle"></div>
+                    <div class="layer layer-top"></div>
+                    <div class="icing"></div>
+                    <div class="candle-container" id="candleContainer">
+                        <div class="candle">
+                            <div class="flame" id="flame"></div>
+                        </div>
+                    </div>
+                </div>
+                <button id="blowBtn" class="secondary-btn">Tiup Lilin </button>
+                <p id="wishMessage" class="wish-message hidden"> Permintaanmu telah dikirim ke semesta! Semoga terwujud! 🌟</p>
+            </div>
+        </section>
+
+
+
+        <!-- Dinding Harapan -->
+        <section class="wishwall-section">
+            <h2 class="section-title">Dinding Harapan </h2>
+            <div class="wish-form-container">
+                <input type="text" id="wishInput" placeholder="Tulis harapanmu di sini..." maxlength="50">
+                <button id="addWishBtn" class="primary-btn">Kirim Harapan</button>
+            </div>
+            <div class="wishes-container" id="wishesContainer">
+                <!-- Harapan dinamis akan muncul di sini -->
+                <div class="wish-bubble">Semoga makin sukses! </div>
+                <div class="wish-bubble">Selalu bahagia ya! </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>Untuk hari spesialmu.</p>
+        </footer>
+    </main>
+
+    <!-- Canvas Konfeti -->
+    <canvas id="confettiCanvas"></canvas>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
